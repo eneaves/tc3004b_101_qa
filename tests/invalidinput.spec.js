@@ -35,7 +35,7 @@ describe('invalidinput', function() {
     });
   
   it('invalidinput', async function() {
-    await driver.get("http://127.0.0.1:5500/src/")
+    await driver.get("http://localhost::8000/")
     await driver.manage().window().setRect({ width: 1470, height: 920 })
     await driver.findElement(By.id("num1")).click()
     await driver.findElement(By.id("num1")).sendKeys("a")
