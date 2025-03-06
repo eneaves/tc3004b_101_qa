@@ -71,7 +71,7 @@ describe('floatingpointprecision', function() {
     });
 
   it('floatingpointprecision', async function() {
-    await driver.get("http://localhost::8000/")
+    await driver.get("http://localhost:8000/")
     await driver.manage().window().setRect({ width: 1470, height: 920 })
     await driver.findElement(By.id("num1")).click()
     await driver.findElement(By.id("num1")).sendKeys("0.1")
