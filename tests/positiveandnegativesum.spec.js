@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 const fs = require('fs')
 
-describe('decimaladdition', function() {
+describe('positiveandnegativesum', function() {
   this.timeout(30000)
   let driver
   let vars
