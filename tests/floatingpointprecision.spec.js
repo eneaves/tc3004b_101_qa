@@ -70,33 +70,6 @@ describe('floatingpointprecision', function() {
 
     });
 
-  it('test1', async function() {
-
-    await driver.get("http://localhost:8000/")
-
-    await driver.manage().window().setRect({ width: 1050, height: 652 })
-
-    await driver.findElement(By.id("num1")).click()
-
-    await driver.findElement(By.id("num1")).sendKeys("1")
-
-    await driver.findElement(By.id("num2")).click()
-
-    await driver.findElement(By.id("num2")).sendKeys("1")
-
-    await driver.findElement(By.css("button:nth-child(1)")).click()
-
-    const filename = 'test1';
-
-            const encodedString = await driver.takeScreenshot();
-
-            await fs.writeFileSync(`./screenshots/${filename}.png`,
-
-                encodedString, 'base64');
-
-  })
-
-})
   it('floatingpointprecision', async function() {
     await driver.get("http://127.0.0.1:5500/src/")
     await driver.manage().window().setRect({ width: 1470, height: 920 })
