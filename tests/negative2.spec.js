@@ -6,7 +6,7 @@ const assert = require("assert");
 
 const fs = require("fs");
 
-describe("2negative", function () {
+describe("negative2", function () {
   this.timeout(30000);
 
   let driver;
@@ -63,7 +63,7 @@ describe("2negative", function () {
       await driver.quit();
     }
   });
-  it("2negative", async function () {
+  it("negative2", async function () {
     await driver.get("http://localhost:8000/");
     await driver.manage().window().setRect({ width: 1470, height: 920 });
     await driver.findElement(By.id("num1")).click();
